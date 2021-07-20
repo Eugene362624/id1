@@ -307,7 +307,17 @@ footer h2 {
 }
 
 @media (max-width: 399px) {
-    .footer-content-wrap h2 {
+    .section-content-wrap h2, .footer-content-wrap h2 {
+        font-size: 20px !important;
+        text-align: center;
+    }
+
+    .menu-item-info h3 {
+        font-size: 14px;
+        
+    }
+    .menu-item-info small {
+        font-size: 10px;
     }
     .address {
         padding: 1rem;
