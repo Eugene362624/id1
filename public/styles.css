@@ -283,6 +283,48 @@ footer h2 {
     box-shadow: 0 0 10px 1px rgba(240,16,53,.3);
 }
 
+@media (max-width: 620px) {
+    header, section, footer, header *, section *, footer * {
+        max-width: 100%;
+    }
+    .menu-item img{
+        max-width: 40% !important;
+    } 
+    header, section, .footer-content-wrap {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    section#first {
+        max-height: none;
+    }
+    .main-content-wrap {
+        padding: 0 1rem;
+    }
+    .main-content-wrap span {
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 399px) {
+    .footer-content-wrap h2 {
+    }
+    .address {
+        padding: 1rem;
+        bottom: -93px;
+    }
+    .menu-item {
+        height: 130px;
+    }
+    .menu-item:hover {
+        height: 133px;
+        width: calc(100% + 3px);
+    }
+    .offer {
+        padding: 1.5rem;
+    }
+}
+
 ::-webkit-scrollbar {
     width: 10px;
   }
