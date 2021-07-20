@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Демо - Кафе</title>
+    <link rel="stylesheet" href="./public/styles.css">
+    <link rel="stylesheet" href="./public/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+    <header id="header">
+        <div class="header-content-wrap">
+            <img src="./public/img/logo.jpg" alt="logo" id='logo'>
+            <h1 id="name">Название кафе</h1>
+            <small id='type'>Кафетерий</small>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="main-content-wrap">
+            <span>Забронировать до 25 мест</span>
+            <button title="Нажмите, чтобы перейти к информации"
+                onclick="window.scroll({top: document.getElementById('address').offsetTop, behavior: 'smooth'})">Позвонить
+                <img src='./public/img/phone-alt-solid.svg'></button>
+        </div>
+    </main>
+
+    <section id="first">
+        <div class="section-content-wrap">
+            <h2>Наши самые популярные блюда</h2>
+            <div class="menu-item">
+                <img src="./public/img/1.jpg" alt="Первое блюдо">
+                <div class="menu-item-info">
+                    <h3>Очень съедобное название</h3>
+                    <small>Очень интересный состав</small>
+                    <button
+                        onclick="window.scroll({top: document.getElementById('address').offsetTop, behavior: 'smooth'})">Заказать</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="./public/img/2.jpg" alt="Второе блюдо">
+                <div class="menu-item-info">
+                    <h3>Очень съедобное название</h3>
+                    <small>Очень интересный состав</small>
+                    <button
+                        onclick="window.scroll({top: document.getElementById('address').offsetTop, behavior: 'smooth'})">Заказать</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="./public/img/3.jpg" alt="Третье блюдо">
+                <div class="menu-item-info">
+                    <h3>Очень съедобное название</h3>
+                    <small>Очень интересный состав</small>
+                    <button
+                        onclick="window.scroll({top: document.getElementById('address').offsetTop, behavior: 'smooth'})">Заказать</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="second">
+        <div class="section-content-wrap">
+            <h2>Наши услуги</h2>
+            <div class="offers-wrap">
+                <div class="offer">
+                    <div class="offer-upper">
+                        <span>Услуга №1</span><i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="offer-bottom">
+                        <p hidden>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quis ex veniam
+                            labore sapiente tenetur pariatur ratione accusamus delectus officia sit omnis odit quas
+                            repudiandae, rerum eveniet? Ut, sed eveniet?</p>
+                    </div>
+                </div>
+                <div class="offer">
+                    <div class="offer-upper">
+                        <span>Услуга №2</span><i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="offer-bottom">
+                        <p hidden>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quis ex veniam
+                            labore sapiente tenetur pariatur ratione accusamus delectus officia sit omnis odit quas
+                            repudiandae, rerum eveniet? Ut, sed eveniet?</p>
+                    </div>
+                </div>
+                <div class="offer">
+                    <div class="offer-upper">
+                        <span>Услуга №3</span><i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="offer-bottom">
+                        <p hidden>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quis ex veniam
+                            labore sapiente tenetur pariatur ratione accusamus delectus officia sit omnis odit quas
+                            repudiandae, rerum eveniet? Ut, sed eveniet?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="address">
+        <div class="footer-content-wrap">
+            <h2>Мы находимся</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2965.8295131596205!2d27.5465062160368!3d53.90284124058201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfeb8a9dea1d%3A0x8d27ff31d270d2b1!2z0KbQtdC90YLRgNCw0LvRjNC90YvQuSDRgNCw0LnQvtC9LCDQnNC40L3RgdC6!5e1!3m2!1sru!2sby!4v1626818020539!5m2!1sru!2sby"
+                height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="address">
+                <span>Ул. Немига, д. 33</span>
+                <a title="Нажмите, чтобы позвонить" href="#">+375333333333</a>
+            </div>
+        </div>
+        <div class="social-media">
+            <a rel="noreferrer" href="#"><i class="fab fa-vk"></i></a>
+            <a rel="noreferrer" href="#"><i class="fab fa-instagram"></i></a>
+            <a rel="noreferrer" href="#"><i class="fab fa-facebook-f"></i></a>
+            <a rel="noreferrer" href="#"><i class="fab fa-odnoklassniki"></i></a>
+            <a rel="noreferrer" href="#"><i class="fab fa-viber"></i></a>
+        </div>
+    </footer>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="./public/js/index.js">
+    </script>
+</body>
+
+</html>
