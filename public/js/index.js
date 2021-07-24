@@ -29,3 +29,64 @@ const clickHandler = (e) => {
     }
 }
 document.querySelectorAll('.offer').forEach(e => e.addEventListener('click', () => clickHandler(e)))
+document.querySelector('.fixed-ad').style.display = 'none'
+document.querySelector('.fixed-ad').addEventListener('click', () => showAd())
+document.querySelector('.ad-upper > #fourth').innerHTML
+
+const showAd = () => {
+    document.querySelector('.ad').style.display = 'flex'
+    document.querySelector('.ad > .ad-content-wrap').addEventListener('click', (e) => e.stopPropagation())
+    document.querySelector('.ad').addEventListener('click', () => closeAd())
+}
+
+const closeAd = () => {
+    document.querySelector('.ad').style.display = 'none'
+    document.querySelector('.fixed-ad').style.display = 'flex'
+}
+
+document.querySelector('.ad-content-wrap > button').addEventListener('click', () => closeAd())
+
+
+setTimeout(() => showAd(), 60000);
+
+const onlyOneTime = () => {
+    let one_hour = (new Date().getTime() + 3660000)
+    let fifth = document.getElementById('fifth')
+    fifth.innerHTML = Math.random().toString(36).substring(2, 8);
+    localStorage.setItem('promoCode', `${fifth.innerHTML}, ${one_hour}`)
+}
+
+const promoCode = localStorage.getItem('promoCode')
+if (promoCode) document.getElementById('fifth').innerHTML = promoCode.split(',')[0]
+if (!promoCode) onlyOneTime();
+
+(function () {
+    const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+
+    let one_hour = (new Date().getTime() + 3660000),
+        countDown = promoCode ? new Date(Number(promoCode.split(',')[1])).getTime() : new Date(one_hour).getTime(),
+        x = setInterval(function () {
+
+
+            let now = new Date().getTime(),
+            distance = countDown - now;
+
+            document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+            document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+            document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+            
+            if (distance < 0) {
+                let headline = document.getElementById("headline"),
+                    countdown = document.getElementById("countdown")
+
+                headline.innerText = "Увы. Десятипроцентная скидка кончилась... Но это не беда! Скажите или напишите нам свой промокод и мы сделаем Вам поощрительную скидку в 3%";
+                countdown.style.display = "none";
+
+                clearInterval(x);
+            }
+        }, 0)
+}());
