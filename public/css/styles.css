@@ -62,7 +62,7 @@
     height: 100%;
     width: 40%;
     padding: 1rem;
-    background-image: url('./img/code.jpg');
+    background-image: url('../img/code.jpg');
     background-size: cover;
     border-radius: 0 10px 10px 0;
     display: -webkit-box;
@@ -334,7 +334,7 @@ header {
 }
 
 main {
-    background-image: url('./img/1bg.jpg');
+    background-image: url('../img/1bg.jpg');
     width: 100%;
     height: calc(100vh - 200px);
     background-repeat: no-repeat;
@@ -665,6 +665,23 @@ footer h2 {
     .main-content-wrap span {
         font-size: 30px;
         text-align: center;
+    }
+    .ad-content-wrap {
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+    }
+    .ad button {
+        color: black;
+    }
+    .ad-parts {
+        width: 100%;
+    }
+    .ad-image {
+        width: 100%;
+        border-radius: 0 0 10px 10px;
     }
 }
 

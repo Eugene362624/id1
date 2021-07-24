@@ -47,7 +47,7 @@ const closeAd = () => {
 document.querySelector('.ad-content-wrap > button').addEventListener('click', () => closeAd())
 
 
-setTimeout(() => showAd(), 60000);
+setTimeout(() => showAd(), 1000);
 
 const onlyOneTime = () => {
     let one_hour = (new Date().getTime() + 3660000)
